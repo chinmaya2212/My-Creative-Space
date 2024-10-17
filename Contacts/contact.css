@@ -1,0 +1,51 @@
+@import url('/style.css');
+
+/* General Contact Section Styles */
+.contact-section {
+    padding: 40px 0; /* Vertical padding */
+    text-align: center; /* Center text */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem; /* Font size */
+    color: #00bcd4; /* Text color */
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
+    box-shadow: 0 4px 10px #00bbd490;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    width: 100%;             /* Full width */
+    max-width: 640px;       /* Maximum width */
+    margin: 0 auto;         /* Center the container */
+    padding: 20px;          /* Optional padding around the iframe */
+    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
+    box-shadow: 0 4px 10px #00bbd490;
+    border-radius: 8px;
+}
+
+iframe {
+    width: 150%;            /* Full width of the container */
+    height: 820px;          /* Fixed height */
+    border: none;           /* Remove border */
+    border-radius: 5px;    /* Optional: round the corners */
+}
+
+/* Optional: Adjust height for smaller screens */
+@media (max-width: 640px) {
+    iframe {
+        height: 600px;      /* Adjust height for smaller screens */
+    }
+}
+
+.work__img.hidden {
+    display: none;
+}
+
+.work__container.show-more .work__img.hidden {
+    display: block;
+}

@@ -1,0 +1,168 @@
+@import url('/style.css');
+
+/* Blogging Section */
+.blog-section {
+    padding: 40px 0;
+    text-align: center; /* Center text */
+}
+
+.blog-section h2 {
+    font-size: 2.5rem; /* Font size */
+    color: #00bcd4; /* Text color */
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
+    box-shadow: 0 4px 10px #00bbd490;
+}
+
+.blog-layout {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Blog Sidebar */
+.blog-sidebar {
+    flex-basis: 25%; /* Takes 25% of the width */
+    position: sticky; /* Make the sidebar sticky */
+    top: 100px; /* Distance from the top of the viewport */
+    height: fit-content; /* Ensure height fits content */
+    border: 1px solid #ccc; /* Add a light border */
+    border-radius: 8px; /* Set border radius to 8px */
+    padding: 10px; /* Add some padding inside the box */
+    box-shadow: 0 4px 8px #00bbd4b7; /* Optional: Add a subtle shadow */
+    background-color: rgba(255, 255, 255, 0.75);
+    flex-direction: column; 
+}
+
+.blog-sidebar h3 {
+    font-size: 1.8rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.blog-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-sidebar ul li {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.blog-sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #00bcd4;
+    transition: color 0.3s ease;
+}
+
+.blog-sidebar ul li a.active {
+    font-weight: bold; /* Make active link bold */
+    color: #0092a5; /* Change color of active link */
+}
+
+.blog-sidebar ul li a:hover {
+    color: #0092a5;
+}
+
+/* Blog Posts Section */
+.blog-posts {
+    flex-basis: 75%; /* Takes 75% of the width */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background-color: rgba(255, 255, 255, 0.70);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #00bbd4b9;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px #00bcd4;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-info {
+    padding: 20px;
+}
+
+.blog-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.blog-info .blog-category {
+    font-size: 0.9rem;
+    color: #00bcd4;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.blog-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.blog-info .read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #00bbd49a;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.blog-info .read-more:hover {
+    background-color: #0092a5
+}
+
+/* Featured Blog Post Card */
+.featured {
+    grid-column: span 2; /* Featured post spans two columns */
+}
+
+.featured img {
+    height: 280px;
+    object-fit: cover;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .blog-layout {
+        flex-direction: column; /* Stack sidebar and posts vertically */
+        padding: 0 40px; /* Add 20px padding on both sides */
+    }
+
+    .blog-sidebar {
+        flex-basis: 100%; /* Sidebar takes full width */
+        margin-bottom: 20px; /* Add space between sidebar and posts */
+        position: static; /* Reset to static on mobile */
+    }
+
+    .blog-card {
+        grid-column: span 2;
+    }
+
+    .blog-posts {
+        flex-basis: 100%; /* Posts take full width */
+    }
+
+}

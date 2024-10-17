@@ -1,0 +1,142 @@
+@import url('/style.css');
+
+/* Projects Section */
+.projects-section {
+    padding: 40px 0; /* Vertical padding */
+    text-align: center; /* Center text */
+}
+
+/* Projects Section Heading */
+.projects-section h2 {
+    font-size: 2.5rem; /* Font size */
+    color: #00bcd4; /* Text color */
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
+    box-shadow: 0 4px 10px #00bbd490;
+}
+
+/* Grid for Project Cards */
+.projects-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 40px; /* Gap between grid items */
+    max-width: 1100px; /* Max width of the grid */
+    margin: 0 auto; /* Center grid */
+}
+
+/* Individual Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.75); /* Background color for card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 6px 14px #00bbd4a0; /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for Project Card */
+.project-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px #00bcd4; /* Enhanced shadow on hover */
+}
+
+/* Project Card Image */
+.project-card img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 8px; /* Rounded corners for top left */
+    border-top-right-radius: 8px; /* Rounded corners for top right */
+}
+
+/* Project Information */
+.project-info {
+    padding: 20px; /* Padding inside project info */
+    text-align: left; /* Align text to the left */
+}
+
+/* Project Title */
+.project-info h3 {
+    font-size: 1.8rem; /* Font size for project title */
+    margin-bottom: 10px; /* Space below title */
+    color: #00bcd4; /* Color for title */
+}
+
+/* Project Description */
+.project-info p {
+    font-size: 1rem; /* Font size for description */
+    color: #666; /* Color for description text */
+    margin-bottom: 15px; /* Space below description */
+}
+
+/* Strong Text */
+.project-info strong {
+    font-weight: bold; /* Bold text */
+    color: #333; /* Color for strong text */
+}
+
+/* Button Styling */
+.project-info .btn {
+    display: inline-block; /* Display as inline block */
+    margin-top: 10px; /* Space above button */
+    padding: 10px 20px; /* Padding for button */
+    background-color: #00bbd486; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from link */
+    font-size: 1rem; /* Font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for Button */
+.project-info .btn:hover {
+    background-color: #0092a5 /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjustments for tablets and smaller devices */
+    .projects-section h2 {
+        font-size: 2rem; /* Smaller heading font size on tablets */
+    }
+
+    .projects-grid {
+        gap: 20px; /* Smaller gap between items on smaller screens */
+        padding: 0 40px; /* Add 20px padding on both sides */
+    }
+
+    .project-info h3 {
+        font-size: 1.5rem; /* Smaller title font size on tablets */
+    }
+
+    .project-info p {
+        font-size: 0.9rem; /* Smaller description font size on tablets */
+    }
+
+    .project-info .btn {
+        font-size: 0.9rem; /* Smaller button font size on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjustments for mobile phones */
+    .projects-section h2 {
+        font-size: 1.8rem; /* Even smaller heading font size on mobile */
+    }
+
+    .project-info h3 {
+        font-size: 1.4rem; /* Smaller title font size on mobile */
+    }
+
+    .project-info p {
+        font-size: 0.85rem; /* Smaller description font size on mobile */
+    }
+
+    .project-info .btn {
+        padding: 8px 16px; /* Adjust padding for button on mobile */
+        font-size: 0.85rem; /* Smaller button font size on mobile */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack project cards in a single column */
+    }
+}

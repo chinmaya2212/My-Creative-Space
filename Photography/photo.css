@@ -1,0 +1,102 @@
+@import url('/style.css');
+
+/* Photography Section */
+.photography-section {
+    padding: 40px 0; /* Vertical padding */
+    text-align: center; /* Center text */
+}
+
+.photography-section h2 {
+    font-size: 2.5rem; /* Font size */
+    color: #00bcd4; /* Text color */
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
+    box-shadow: 0 4px 10px #00bbd490;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gallery Item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #00bcd4;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .photography-section {
+        padding: 40px 0; /* Reduced padding for mobile */
+    }
+
+    .photography-section h2 {
+        font-size: 2rem; /* Smaller heading size for mobile */
+        margin-bottom: 50px; /* Reduced bottom margin */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust grid for smaller screens */
+        gap: 15px; /* Reduced gap between items */
+        padding: 0 20px; /* Add padding to the gallery */
+    }
+
+    .overlay h3 {
+        font-size: 1.3rem; /* Smaller font size for overlay title */
+    }
+
+    .overlay p {
+        font-size: 0.9rem; /* Smaller font size for overlay description */
+    }
+}

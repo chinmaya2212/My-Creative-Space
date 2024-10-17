@@ -1,0 +1,122 @@
+@import url('/style.css');
+
+/* Overall section styling */
+.skills-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Section title styling */
+.skills-section h2 {
+    font-size: 2.5rem; /* Font size */
+    color: #00bcd4; /* Text color */
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
+    box-shadow: 0 4px 10px #00bbd490;
+}
+
+
+/* Skill grid layout with responsive behavior */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust columns automatically */
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Individual skill box styling */
+.skill {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px #00bbd487;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px #00bcd4; /* Enhanced shadow on hover */
+}
+
+/* Skill title styling */
+.skill h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #00bcd4; /* Green color for skill headings */
+}
+
+/* Skill list styling */
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    display: flex;
+    align-items: center; /* Align text and logo vertically */
+    margin-bottom: 20px;
+}
+
+/* Styling for logos (ensure uniform size, shape, and color) */
+.skill-list img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%; /* Circular logos */
+    object-fit: cover; /* Maintain logo aspect ratio */
+    filter: grayscale(100%); /* Apply grayscale to logos */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.skill-list img:hover {
+    filter: grayscale(0%); /* Return to original color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Text below logos */
+.skill-list span {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 6px;
+}
+
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    /* Add side padding for the container in mobile view */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skill cards */
+        padding: 0 40px; /* Add 40px padding on both sides */
+    }
+
+    .skills-section h2 {
+        font-size: 2rem; /* Reduce title size */
+        margin-bottom: 50px;
+    }
+
+    .skill {
+        padding: 20px; /* Decrease padding for mobile */
+    }
+
+    .skill h3 {
+        font-size: 1.6rem; /* Reduce skill heading size */
+    }
+
+    .skill-list li {
+        margin-bottom: 15px; /* Reduce space between skills */
+    }
+
+    .skill-list img {
+        width: 35px; /* Slightly smaller logos for mobile */
+        height: 35px;
+    }
+
+    .skill-list span {
+        font-size: 1.1rem; /* Reduce text size for skills */
+    }
+
+}
+

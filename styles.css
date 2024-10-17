@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Open San';
+    line-height: 1.6;
+    background-color: #333;
+    color: #333;
+    padding-top: 70px; /* Space for fixed navbar */
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.sticky {
+    background-color: rgba(255, 255, 255, 0.90); /* Semi-transparent background on scroll */
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+.nav-links a:hover {
+    background-color: #00bcd4;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00bcd4;;
+    border-radius: 8px;
+    min-width: 160px;
+    z-index: 1;
+    flex-direction: column;
+    right: 0; /* Aligns dropdown to the right side of the parent */
+    top: 100%; /* Positioning it just below the dropdown button */
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a:hover {
+    background-color: #0092a5;
+}
+
+/* Ensure the dropdown content does not overflow the viewport */
+.dropdown-content {
+    overflow-x: hidden;
+    max-width: calc(100vw - 20px); /* Prevents overflowing outside the window */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: black;
+    font-size: 26px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0092a5;
+        position: absolute;
+        border-radius: 8px;
+        min-width: 160px;
+        top: 100%;
+        right: 0;
+        margin-right: 5px;
+    }
+
+    .nav-links :hover {
+        background-color: #00bcd4;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+        margin-top: -20px;
+        border-bottom: 1px solid #444;
+    }
+    
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    /* Handle dropdowns in mobile view */
+    .dropdown-content {
+        position: absolute; /* Ensure dropdown is positioned absolutely */
+        left: 0; /* Align dropdown to the left side of the parent */
+    }
+
+    .dropdown-content.show {
+        display: flex;
+    }
+}
+
+/* Home Section Styling */
+.home {
+    height: 100vh; /* Full-screen section */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Assets/home.jpeg') center/cover no-repeat; /* Background image with overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.home-content {
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Title Animation */
+.home-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.home-title span {
+    color: #00bcd4; /* Highlighting the website name */
+    font-size: 4.5rem;
+    font-weight: bold;
+    animation: colorChange 3s infinite;
+}
+
+.home-description {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0092a5;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #00bcd4;
+    }
+    25% {
+        color: #00a5ba;
+    }
+    50% {
+        color: #008698;
+    }
+    75% {
+        color: #00a5ba;
+    }
+    100% {
+        color: #00bcd4;
+    }
+}
+
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 3rem;
+    }
+    
+    .home-title span {
+        font-size: 3.5rem;
+    }
+
+    .home-description {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 10px 25px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 20px 0 20px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;     /* Center vertically (if needed) */
+    padding: 20px;           /* Optional: Add padding for spacing */
+    text-align: center;      /* Optional: Center text within the flex items */
+}
+
+.footer-info, .footer-links, .footer-social {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-info h3, .footer-links h3, .footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-info p, .footer-links ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+    flex: 1 1 50%; /* Each list item will take 50% of the width */
+}
+
+.footer-links ul li a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Links */
+.footer-social a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #00bcd4;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info, .footer-links, .footer-social, .footer-newsletter {
+        margin: 20px 0;
+    }
+}
