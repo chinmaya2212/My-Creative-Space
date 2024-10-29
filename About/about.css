@@ -68,11 +68,7 @@
 }
 
 /* Responsive Styling for About Section */
-@media (max-width: 768px) {
-    .about-section h2 {
-        margin-bottom: 60px;
-    }
-    
+@media (max-width: 768px) {    
     .about-content {
         flex-direction: column; /* Stack items vertically */
         text-align: center; /* Center align text */
@@ -92,7 +88,7 @@
 @media (max-width: 480px) {
     .about-section h2 {
         font-size: 2rem; /* Smaller font size for heading */
-        margin-bottom: 40px; /* Adjust margin for heading */
+        margin-bottom: 30px; /* Adjust margin for heading */
     }
 
     .about-text p {
