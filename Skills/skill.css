@@ -12,8 +12,7 @@
     color: #00bcd4; /* Text color */
     margin-top: 20px;
     margin-bottom: 60px;
-    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
-    box-shadow: 0 4px 10px #00bbd490;
+    background-color: rgba(255, 255, 255, 0.85); /* Optional: Light background for the box */
 }
 
 
@@ -28,16 +27,14 @@
 
 /* Individual skill box styling */
 .skill {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 6px 14px #00bbd487;
     transition: transform 0.3s ease;
 }
 
 .skill:hover {
     transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 6px 15px #00bcd4; /* Enhanced shadow on hover */
 }
 
 /* Skill title styling */
