@@ -12,8 +12,7 @@
     color: #00bcd4; /* Text color */
     margin-top: 20px;
     margin-bottom: 60px;
-    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
-    box-shadow: 0 4px 10px #00bbd490;
+    background-color: rgba(255, 255, 255, 0.85); /* Optional: Light background for the box */
 }
 
 /* Grid for Project Cards */
@@ -27,16 +26,14 @@
 
 /* Individual Project Card */
 .project-card {
-    background: rgba(255, 255, 255, 0.75); /* Background color for card */
+    background: rgba(255, 255, 255, 0.85); /* Background color for card */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 6px 14px #00bbd4a0; /* Shadow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 /* Hover effect for Project Card */
 .project-card:hover {
     transform: translateY(-10px); /* Slight lift on hover */
-    box-shadow: 0 6px 15px #00bcd4; /* Enhanced shadow on hover */
 }
 
 /* Project Card Image */
