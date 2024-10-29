@@ -1,9 +1,19 @@
 // Mobile Menu Toggle
-const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenu = document.getElementById('mobile-menu'); // Ensure this is your toggle button
 const navLinks = document.querySelector('.nav-links');
 
-mobileMenu.addEventListener('click', () => {
+// Toggle mobile menu on button click
+mobileMenu.addEventListener('click', (event) => {
     navLinks.classList.toggle('nav-active');
+    event.stopPropagation(); // Prevent click event from bubbling up
+});
+
+// Hide mobile menu when clicking outside
+document.addEventListener('click', (event) => {
+    // Check if the click was outside the mobile menu and toggle button
+    if (!mobileMenu.contains(event.target) && !navLinks.contains(event.target)) {
+        navLinks.classList.remove('nav-active');
+    }
 });
 
 // Sticky Navbar
@@ -20,31 +30,15 @@ window.onscroll = function() {
 const dropdown = document.querySelector('.dropdown');
 const dropdownContent = document.querySelector('.dropdown-content');
 
-dropdown.addEventListener('click', () => {
+// Toggle dropdown menu on click
+dropdown.addEventListener('click', (event) => {
     dropdownContent.classList.toggle('show');
+    event.stopPropagation(); // Prevent click event from bubbling up
 });
 
-
-
-// Scroll Reveal Animation
-window.addEventListener('scroll', () => {
-    const homeContent = document.querySelector('.home-content');
-    const homePosition = homeContent.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.3;
-
-    if (homePosition < screenPosition) {
-        homeContent.style.opacity = '1';
-        homeContent.style.transform = 'translateY(0)';
-    }
-});
-
-// Back to Top Button
-const backToTopBtn = document.querySelector('.back-to-top');
-
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopBtn.classList.add('show-back-to-top');
-    } else {
-        backToTopBtn.classList.remove('show-back-to-top');
+// Hide dropdown menu when clicking outside
+document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target) && dropdownContent.classList.contains('show')) {
+        dropdownContent.classList.remove('show');
     }
 });
