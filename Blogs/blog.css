@@ -11,8 +11,7 @@
     color: #00bcd4; /* Text color */
     margin-top: 20px;
     margin-bottom: 60px;
-    background-color: rgba(255, 255, 255, 0.75); /* Optional: Light background for the box */
-    box-shadow: 0 4px 10px #00bbd490;
+    background-color: rgba(255, 255, 255, 0.85); /* Optional: Light background for the box */
 }
 
 .blog-layout {
@@ -31,8 +30,7 @@
     border: 1px solid #ccc; /* Add a light border */
     border-radius: 8px; /* Set border radius to 8px */
     padding: 10px; /* Add some padding inside the box */
-    box-shadow: 0 4px 8px #00bbd4b7; /* Optional: Add a subtle shadow */
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.85);
     flex-direction: column; 
 }
 
@@ -78,16 +76,14 @@
 }
 
 .blog-card {
-    background-color: rgba(255, 255, 255, 0.70);
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
-    box-shadow: 0 4px 12px #00bbd4b9;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 15px #00bcd4;
 }
 
 .blog-card img {
