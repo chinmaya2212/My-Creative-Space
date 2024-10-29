@@ -64,12 +64,10 @@
     margin-right: 10px;
     border-radius: 50%; /* Circular logos */
     object-fit: cover; /* Maintain logo aspect ratio */
-    filter: grayscale(100%); /* Apply grayscale to logos */
     transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .skill-list img:hover {
-    filter: grayscale(0%); /* Return to original color on hover */
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
