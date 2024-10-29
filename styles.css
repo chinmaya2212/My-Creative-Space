@@ -174,7 +174,6 @@ body {
 .home-content {
     max-width: 800px;
     padding: 0 20px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 /* Title Animation */
@@ -185,10 +184,9 @@ body {
 }
 
 .home-title span {
-    color: #00bcd4; /* Highlighting the website name */
+    color: #00c9e3; /* Highlighting the website name */
     font-size: 4.5rem;
     font-weight: bold;
-    animation: colorChange 3s infinite;
 }
 
 .home-description {
@@ -231,35 +229,6 @@ body {
     background-color: white;
     color: #333;
 }
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes colorChange {
-    0% {
-        color: #00bcd4;
-    }
-    25% {
-        color: #00a5ba;
-    }
-    50% {
-        color: #008698;
-    }
-    75% {
-        color: #00a5ba;
-    }
-    100% {
-        color: #00bcd4;
-    }
-}
-
 
 /* Media Queries for Mobile View */
 @media (max-width: 768px) {
