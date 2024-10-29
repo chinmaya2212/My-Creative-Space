@@ -92,7 +92,7 @@
 @media (max-width: 480px) {
     .about-section h2 {
         font-size: 2rem; /* Smaller font size for heading */
-        margin-bottom: 30px; /* Adjust margin for heading */
+        margin-bottom: 40px; /* Adjust margin for heading */
     }
 
     .about-text p {
