@@ -69,6 +69,10 @@
 
 /* Responsive Styling for About Section */
 @media (max-width: 768px) {
+    .about-section h2 {
+        margin-bottom: 20px;
+    }
+    
     .about-content {
         flex-direction: column; /* Stack items vertically */
         text-align: center; /* Center align text */
